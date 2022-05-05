@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+	<head> </head>
+	<body>
+		<h1>Newsletter</h1>
+		<form action="form_handler.php" method="post">
+			<fieldset>
+				<legend>
+					<h2>Sign Up for Our Newsletter</h2>
+				</legend>
+
+				<label for="first_name">First Name:</label>
+				<input type="text" id="first_name" name="first_name" required/>
+				<br />
+
+				<label for="last_name">Last Name:</label>
+				<input type="text" id="last_name" name="last_name" required/>
+				<br />
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required/>
+                <br />
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required/>
+                <br />
+
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday" required/>
+                <br />
+
+                Can we send you an e-mail for your birthday?
+                <input type="radio" id="radio_yes" value="yes" name="bmail" required/>
+                <label for="radio_yes">Yes</label>
+                <input type="radio" id="radio_no" value="no" name="bmail" required/>
+                <label for="radio_no">No</label>
+                <br />
+
+                <label for="comments">Comments:</label>
+                <br>
+                <textarea
+                    id="comments"
+                    name="comments"
+                    placeholder="Leave a comment"
+                    rows="10"
+                    cols="40"
+                ></textarea>
+                <br />
+
+                <input type="submit" value="Submit" />
+                <input type="reset" />
+
+		</form>
+	</body>
+</html>
