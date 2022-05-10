@@ -1,44 +1,103 @@
 <!DOCTYPE html>
 
 <html>
-	<head> </head>
-	<body>
-		<h1>Newsletter</h1>
-		<form action="form_handler.php" method="post">
-			<fieldset>
-				<legend>
-					<h2>Sign Up for Our Newsletter</h2>
-				</legend>
+    <head>
+        <title>Newsletter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+    </head>
+    <body id="form-body">
+        <nav>
+            <ul class="flex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bio.html">Author Bio</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="adaptations.html">Adaptations</a></li>
+                <li><a href="form.html">Newsletter</a></li>
+            </ul>
+        </nav>
 
-				<label for="first_name">First Name:</label>
-				<input type="text" id="first_name" name="first_name" required/>
-				<br />
-
-				<label for="last_name">Last Name:</label>
-				<input type="text" id="last_name" name="last_name" required/>
-				<br />
-
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required/>
+        <h1 id="form-h1">Newsletter</h1>
+        <form action="form_handler.php" method="post">
+            <fieldset>
+                <legend>
+                    <h2 id="form-legend">Sign Up for Our Newsletter</h2>
+                </legend>
+                <label for="first_name" class="col-25">First Name:</label>
+                <input
+                    type="text"
+                    id="first_name"
+                    name="first_name"
+                    class="col-75"
+                    required
+                />
                 <br />
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required/>
+                <label for="last_name" class="col-25">Last Name:</label>
+                <input
+                    type="text"
+                    id="last_name"
+                    name="last_name"
+                    class="col-75"
+                    required
+                />
                 <br />
 
-                <label for="birthday">Birthday:</label>
-                <input type="date" id="birthday" name="birthday" required/>
+                <label for="email" class="col-25">Email Address:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="col-75"
+                    required
+                />
                 <br />
 
-                Can we send you an e-mail for your birthday?
-                <input type="radio" id="radio_yes" value="yes" name="bmail" required/>
+                <label for="password" class="col-25">Password:</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    class="col-75"
+                    required
+                />
+                <br />
+
+                <label for="birthday" class="col-25">Birthday:</label>
+                <input
+                    type="date"
+                    id="birthday"
+                    name="birthday"
+                    class="col-75"
+                    required
+                />
+                <br />
+                <div class="clear"></div>
+                <br />
+                <label for="bmail"
+                    >Can we send you an e-mail for your birthday?</label
+                >
+                <div class="clear"></div>
+                <input
+                    type="radio"
+                    id="radio_yes"
+                    value="yes"
+                    name="bmail"
+                    required
+                />
                 <label for="radio_yes">Yes</label>
-                <input type="radio" id="radio_no" value="no" name="bmail" required/>
+                <input
+                    type="radio"
+                    id="radio_no"
+                    value="no"
+                    name="bmail"
+                    required
+                />
                 <label for="radio_no">No</label>
                 <br />
 
-                <label for="comments">Comments:</label>
-                <br>
+                <label for="comments" class="col-25">Comments:</label>
+                <br />
                 <textarea
                     id="comments"
                     name="comments"
@@ -50,7 +109,15 @@
 
                 <input type="submit" value="Submit" />
                 <input type="reset" />
-
-		</form>
-	</body>
+            </fieldset>
+        </form>
+        <footer>
+            <p>
+                This site is authored and maintained by Chris McKenna. It is not
+                an official website of the Maricopa County Community College
+                District, and Maricopa is not responsible for the content of
+                this site.
+            </p>
+        </footer>
+    </body>
 </html>
