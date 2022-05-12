@@ -18,7 +18,28 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    min-width: 575px;
+}
+
+/* -------------------- Fonts -------------------- */
+
+/* This font is copyright 2006 Nate Piekos.  All Rights Reserved.  
+Created for Blambot Fonts */
+
+@font-face {
+    font-family: 'Anime Ace';
+    src: url(animeace2_reg.ttf);
+}
+
+@font-face {
+    font-family: 'Anime Ace';
+    src: url(animeace2_bld.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Anime Ace';
+    src: url(animeace2_ital.ttf);
+    font-style: italic;
 }
 
 /* -------------------- Classes -------------------- */
@@ -54,6 +75,11 @@ html {
     align-items: stretch;
 }
 
+.bg-heading {
+    background-color: #737373dc;
+    clear: both;
+}
+
 header {
     padding: 3%;
 }
@@ -62,16 +88,14 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-        'Lucida Sans', Arial, sans-serif;
+    font-family: 'Anime Ace', Arial, sans-serif;
     color: #fff;
 }
 
 header h1 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-        'Lucida Sans', Arial, sans-serif;
+    font-family: 'Anime Ace', Arial, sans-serif;
     color: #fff;
-    font-size: 400%;
+    font-size: 200%;
     margin: auto;
     text-align: center;
     position: relative;
@@ -81,7 +105,7 @@ header h1 {
 
 header h2 {
     color: #fff;
-    font-size: 800%;
+    font-size: 150%;
     margin: auto;
     text-align: center;
     z-index: -1;
@@ -105,8 +129,16 @@ a:hover {
 /* -------------------- Nav -------------------- */
 
 nav {
+    background-image: url(stars.png);
     color: #fff;
     margin-bottom: 1%;
+    /* border: 4px solid #000; */
+    text-align: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1% 0;
+    width: 100%;
 }
 
 nav ul {
@@ -115,6 +147,7 @@ nav ul {
     margin: 0;
     padding: 0;
     justify-content: center;
+    backdrop-filter: blur(5px) brightness(60%);
 }
 
 nav ul li {
@@ -214,30 +247,11 @@ form {
         'Lucida Sans', Arial, sans-serif;
     margin: auto;
     width: 60%;
-    min-width: 550px;
-}
-
-.form-body {
-    background-color: #d9d9d9;
-    padding: 3%;
-}
-
-legend {
-    /* transform: translateY(50px); */
-    z-index: 1;
-    padding: 0;
-    border: 2px solid #000;
-    width: 50%;
-    margin: auto;
-    text-align: center;
-}
-
-legend h2 {
-    padding: 0;
+    /* min-width: 550px; */
 }
 
 fieldset {
-    margin: 1rem;
+    margin: 1%;
     background-color: #d9d9d9;
     padding: 5%;
     border: 4px solid #000;
@@ -273,24 +287,29 @@ input[type='radio'] {
 #form-body {
     background-color: #8080806b;
     height: 100%;
-    padding: 2%;
+    /* padding: 2%; */
 }
 
 legend {
     background-image: url(stars.png);
     border: 4px solid #000;
+    text-align: center;
     background-attachment: fixed;
-    padding: 5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1%;
     width: 100%;
 }
 
-legend h2 {
-    color: #fff;
+#form-legend {
+    color: rgb(255, 255, 255);
     font-size: 200%;
-    background-color: #737373dc;
+    /* background-color: rgba(255, 255, 255, 0.645); */
+    border: 3px solid rgb(255, 255, 255);
     border-radius: 3px;
     box-shadow: 5px 5px 10px #000;
-    padding: 5%;
+    padding: 3%;
+    backdrop-filter: blur(5px) brightness(60%);
 }
 
 body {
@@ -445,14 +464,25 @@ h4 {
     width: 100%;
     padding: 1%;
     margin: 4% auto;
-    background-color: #737373dc;
+    /* background-color: #737373dc; */
 }
 
 footer {
-    font-size: 60%;
-    width: 60%;
+    padding: 1%;
+    width: 70%;
     margin: auto;
+    margin-top: 5%;
+    background-color: #fff;
+    border: 2px solid #000;
 }
+
+footer p {
+    color: #000;
+    font-size: 80%;
+    text-align: center;
+}
+
+/*   ************ Media Queries ************  */
 
 @media screen and (max-width: 560px) {
     .flex {
@@ -535,6 +565,13 @@ footer {
         margin: 3% 0;
     }
 
+    article {
+        margin: 3% 0;
+        padding: 2%;
+        border-top: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+    }
+
     article img {
         width: 100%;
         margin: 0;
@@ -543,7 +580,7 @@ footer {
 
     article p {
         width: 100%;
-        margin: 0;
+        margin: 3% auto;
         clear: both;
     }
 
@@ -582,5 +619,22 @@ footer {
         margin: 0;
         border-radius: 6px;
         box-shadow: 5px 5px 10px #000;
+    }
+
+    form {
+        color: #000;
+        /* background-color: #fff; */
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        margin: auto;
+        width: 100%;
+        /* min-width: 550px; */
+    }
+
+    fieldset {
+        /* margin: 1%; */
+        background-color: #d9d9d9;
+        /* padding: 5%; */
+        border: 4px solid #000;
     }
 }
